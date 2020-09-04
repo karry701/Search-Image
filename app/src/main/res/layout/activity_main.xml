@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <SearchView
+                android:id="@+id/sv_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:queryHint="Search Here"
+                android:iconifiedByDefault="false"
+                android:layout_alignParentTop="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_responce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:visibility="visible">
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/mswipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <GridView
+                    android:id="@+id/rv_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="90dp"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:stretchMode="columnWidth"
+                    android:gravity="center">
+                </GridView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+            <TextView
+                android:id="@+id/et_notfound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:gravity="center">
+            </TextView>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
