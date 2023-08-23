@@ -18,6 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+    system.out.println("data");
     //Global variable
     GridView rv_recycler;
     private SwipeRefreshLayout mswipe;
